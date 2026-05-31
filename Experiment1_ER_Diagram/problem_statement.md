@@ -111,7 +111,6 @@ A popular restaurant wants to manage reservations, orders, and billing.
 ### ER Diagram:
 <img width="654" height="807" alt="image" src="https://github.com/user-attachments/assets/b5c46448-4556-439f-83b3-9870f2c1d62f" />
 
-
 ### Entities and Attributes
 
 |   Entity     |                                        Attributes (PK, FK)                                            |           Notes            |
