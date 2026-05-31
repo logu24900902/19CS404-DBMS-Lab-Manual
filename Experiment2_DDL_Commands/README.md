@@ -1,5 +1,4 @@
 # Experiment 2: DDL Commands
-
 ## AIM
 To study and implement DDL commands and different types of constraints.
 
@@ -105,123 +104,165 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+Create a table named Products with the following columns:
+
+ProductID as INTEGER ProductName as TEXT Price as REAL Stock as INTEGER
 
 ```sql
--- Paste your SQL code below for Question 1
+create table products(
+ProductID INTEGER,
+ProductName TEXT,
+Price REAL,
+Stock INTEGER
+);
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1205" height="366" alt="q1" src="https://github.com/user-attachments/assets/dc824766-3a48-464d-9078-e7b9d07f7259" />
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+Write an SQL Query to add the attributes designation, net_salary, and dob to the Companies table with the following data types: designation as VARCHAR(50) net_salary as NUMBER dob as DATE
 
 ```sql
--- Paste your SQL code below for Question 2
+alter table Companies add column designation varchar(50);
+alter table Companies add column net_salary number;
+alter table Companies add column dob date;
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="1185" height="401" alt="q2" src="https://github.com/user-attachments/assets/721db2ce-af3e-4d81-bc06-3289b78c74f8" />
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+Create a table named Locations with the following columns:
+
+LocationID as INTEGER LocationName as TEXT Address as TEXT
 
 ```sql
--- Paste your SQL code below for Question 3
+create table Locations(
+LocationID INTEGER,
+LocationName TEXT,
+Address TEXT
+);
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="1179" height="369" alt="592988297-f2df3e1f-733a-468d-9957-1c90a9956551" src="https://github.com/user-attachments/assets/0b9767ee-8dd2-48bb-917a-2c937a33b045" />
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+Create a table named Orders with the following constraints: OrderID as INTEGER should be the primary key. OrderDate as DATE should be not NULL. CustomerID as INTEGER should be a foreign key referencing Customers(CustomerID).
 
 ```sql
--- Paste your SQL code below for Question 4
+create table Orders(
+OrderID INTEGER primary key,
+OrderDate DATE not null,
+CustomerID INTEGER,
+foreign key (CustomerID) references Customers(CustomerID)
+);
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="1188" height="272" alt="q4" src="https://github.com/user-attachments/assets/a0f796ab-1feb-488d-8695-7fc45bef4ca3" />
 
 **Question 5**
 ---
--- Paste Question 5 here
+Create a table named Events with the following columns:
+
+EventID as INTEGER EventName as TEXT EventDate as DATE
 
 ```sql
--- Paste your SQL code below for Question 5
+create table Events(
+EventID INTEGER,
+EventName TEXT,
+EventDate DATE
+);
 ```
 
 **Output:**
 
-![Output5](output.png)
-
+<img width="1192" height="366" alt="q5" src="https://github.com/user-attachments/assets/6cce4853-ee06-40f2-bc6e-a0cea7166269" />
 **Question 6**
 ---
--- Paste Question 6 here
+Create a table named Orders with the following columns:
+
+OrderID as INTEGER OrderDate as TEXT CustomerID as INTEGER
 
 ```sql
--- Paste your SQL code below for Question 6
+create table Orders(
+OrderID INTEGER,
+OrderDate TEXT,
+CustomerID INTEGER
+);
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="1179" height="363" alt="q6" src="https://github.com/user-attachments/assets/8dc5640e-5894-4a4d-a163-20743eeb215f" />
 
 **Question 7**
 ---
--- Paste Question 7 here
+Insert the following products into the Products table:
 
 ```sql
--- Paste your SQL code below for Question 7
+insert into Products (Name,Category,Price,Stock)
+ values
+ ('Smartphone','Electronics',800,150),
+ ('Headphones','Accessories',200,300);
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="1190" height="342" alt="q7" src="https://github.com/user-attachments/assets/7c3454bb-c18c-4da1-a160-2243cc1ec23a" />
 
 **Question 8**
 ---
--- Paste Question 8 here
-
+Insert a student with RollNo 201, Name David Lee, Gender M, Subject Physics, and MARKS 92 into the Student_details table.
 ```sql
--- Paste your SQL code below for Question 8
+insert into Student_details (RollNo,Name,Gender,Subject,Marks)
+values 
+(201,'David Lee','M','Physics',92);
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="1186" height="234" alt="q8" src="https://github.com/user-attachments/assets/e589022b-f60f-43aa-96a3-3deb362477fe" />
 
 **Question 9**
 ---
--- Paste Question 9 here
+Write a SQL query to modify the Student_details table by adding a new column Email of type VARCHAR(50) and updating the column MARKS to have a default value of 0.
 
 ```sql
--- Paste your SQL code below for Question 9
+ALTER table Student_details add Email varchar(50);
+alter table Student_details 
+add column MARKS integer default 0;
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="1180" height="231" alt="9q" src="https://github.com/user-attachments/assets/eff30b68-c159-4e52-886d-8b329cad2f3a" />
 
 **Question 10**
 ---
--- Paste Question 10 here
+Insert all students from Archived_students table into the Student_details table.
 
 ```sql
--- Paste your SQL code below for Question 10
+insert into Student_details(RollNo,Name,Gender,Subject,Marks)
+select RollNo,Name,Gender,Subject,Marks
+from Archived_students;
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="1262" height="294" alt="Screenshot 2026-05-24 204551" src="https://github.com/user-attachments/assets/c2b6f00e-3a92-4af8-be5b-9c01c6b0c7f8" />
 
 
 ## RESULT
