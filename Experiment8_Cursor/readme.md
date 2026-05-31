@@ -1,6 +1,5 @@
 # Experiment 8: PL/SQL Cursor Programs
-# Name : Ramya.P
-# Reg no : 212223240137
+
 ## AIM
 To write and execute PL/SQL programs using cursors and exception handling to manage runtime errors effectively and display appropriate messages.
 
